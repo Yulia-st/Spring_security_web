@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/styles/notes_CSS.css">
+<title>Notes list</title>
+
+</head>
+<body>
+	<h1>Notes list</h1>
+	<a href="/notes/create">Create new note</a>
+	<div th:each="note : ${notes}" class="containerNotes">
+		<div>-------------</div>
+		<div th:text="${note.id}"></div>
+		<div th:text="${note.title}"></div>
+		<div th:text="${note.message}"></div>
+		<div th:text="${note.startDate}"></div>
+		<div>
+			<div>
+				<a th:href="@{/notes/{n}(n=${note.id})}">Info</a>
+			</div>
+			<div>
+				<a th:href="@{/notes/delete/{n}(n=${note.id})}">Delete</a>
+			</div>
+			<div>
+				<a th:href="@{/notes/edit/{n}(n=${note.id})}">Edit</a>
+			</div>
+		</div>
+		<div>-------------</div>
+	</div>
+	<form action="/notes/search" name="note" method="get">
+		<div>
+			<input name="date1" type="date" placeholder="yy/mm/dd" id="inPut">
+		</div>
+		<!--  <div>
+			<input name="date2" type="date" placeholder="yy/mm/dd">
+		</div>-->
+		<input type="submit" value="Search by date" class="pressed-button">
+	</form>
+</body>
+</html>

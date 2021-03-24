@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/styles/create_note_CSS.css">
+<title>Create note</title>
+</head>
+<body>
+	<h2>Create new note</h2>
+	<form action="/notes/add" name="note" method="post" class="containerCreate">
+		<div>
+			<input name="title" type="text" placeholder="title" id="inPut">
+		</div>
+		<div>
+			<textarea name="message" placeholder="message"></textarea>
+		</div>
+		
+		<input type="submit" value="Create" class="floating-button">
+	</form>
+</body>
+</html>

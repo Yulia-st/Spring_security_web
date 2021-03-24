@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body {
+	background:url(https://html5book.ru/wp-content/uploads/2015/07/background39.png); 
+	font-family: Courier New, Times New Roman, Arial, sans-serif;
+}
+
+h1 {
+	color: navy;
+}
+h2{
+	color: orange;
+}
+
+div.green_text {
+	color: green;
+}
+
+#first {
+	color: blue;
+}
+
+.big_text {
+	font-size: 30px;
+}
+.container{
+	border:1px double blue;
+	width: 500px;
+	height: 250px;
+	margin: 30px;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+.item {
+    border:1px double blue;
+	margin: 10px;
+	padding: 10px;
+
+}
